@@ -1,0 +1,26 @@
+git clone https://github.com/georgy-schukin/mini-rt
+
+mkdir build
+cd build
+cmake ../mini-rt/src
+make 
+sudo make install
+
+g++ -O2 -o raytracing raytracing.cpp -I/usr/local/include -L/usr/local/lib -lminirt
+
+tolegen_a@WIN-TTIJDRQVP5B:~$ ls -l
+
+total 260
+drwxr-xr-x 1 tolegen_a tolegen_a   4096 Oct 24 21:33 build
+drwxr-xr-x 1 tolegen_a tolegen_a   4096 Oct 24 20:01 mini-rt
+-rwxr-xr-x 1 tolegen_a tolegen_a 198144 Oct 24 21:51 raytracing
+-rw-r--r-- 1 tolegen_a tolegen_a   2757 Oct 24 20:01 raytracing.cpp
+-rw-r--r-- 1 tolegen_a tolegen_a  31002 Oct 24 22:31 raytracing.jpg
+
+tolegen_a@WIN-TTIJDRQVP5B:~$ ./raytracing 640 480 1
+
+tolegen_a@WIN-TTIJDRQVP5B:~$ ./raytracing 1920 1080 2
+
+tolegen_a@WIN-TTIJDRQVP5B:~$ ./raytracing 1920 1080 10
+
+tolegen_a@WIN-TTIJDRQVP5B:~$
