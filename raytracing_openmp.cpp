@@ -1,4 +1,4 @@
-// You can use this example as a starting point for Task 2.
+
  
 #include "minirt/minirt.h"
  
